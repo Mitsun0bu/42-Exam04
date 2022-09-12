@@ -1,6 +1,6 @@
 # 42-exam_04_training
 
-This repository contains my solutions for the 42 School exam_03.   
+This repository contains my solutions for the 42 School exam_04.   
 At the time I passed it, it was required to do :   
 - microshell   
 
