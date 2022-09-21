@@ -6,18 +6,18 @@ void	ft_cmd(char** av, char** env);
 void	ft_cd(char** av);
 void	ft_exit(char* str1, char* str2);
 int		ft_strlen(char* str);
-int		ft_exec(char**av, int* fd, int pipe_fd[2], char** env);
+int		ft_exec(char** av, int* fd, int pipe_fd[2], char** env);
 
 int	main(int ac, char** av, char** env)
 {
 	int	i		= 1;
 	int	start	= 1;
 
-	if (ac < 2)
+	if(ac < 2)
 		return (0);
 	while(av[i])
 	{
-		if(!strcmp(av[i], ";"))
+		if (!strcmp(av[i], ";"))
 		{
 			av[i] = NULL;
 			ft_cmd(&av[start], env);
@@ -30,7 +30,7 @@ int	main(int ac, char** av, char** env)
 			i ++;
 	}
 	ft_cmd(&av[start], env);
-	return(0);
+	return (0);
 }
 
 void	ft_cmd(char** av, char** env)
@@ -42,7 +42,7 @@ void	ft_cmd(char** av, char** env)
 	if(!av[i])
 		return ;
 	if(!strcmp(av[i], "cd"))
-		return(ft_cd(&av[i]));
+		return (ft_cd(&av[i]));
 	while(av[i])
 		i += ft_exec(&av[i], &fd, pipe_fd, env);
 	close(fd);
