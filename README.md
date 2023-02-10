@@ -1,4 +1,4 @@
-# 42-exam_04_training
+# 42-exam_04
 
 This repository contains my solutions for the 42 School exam_04.   
 At the time I passed it, it was required to do :   
